@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
 
 function App() {
+  const [showTime, setShowTime] = useState(new Date());
+  useEffect(() => {
+    const timer = setInterval(()=> {
+      setShowTime(new Date());
+    }, 1000);
+    return ()=> clearInterval(timer);
+  }, [setShowTime]);
+
+  const [time, setTime] = useState('');
+  const handleTime =(e)=> setTime(e.target.value);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>現在の時刻</p>
+      <p>{showTime.toLocaleTimeString([],{hour: 'numeric', minute:'numeric'})}</p>
+      <input type="time" value={time} onChange={handleTime} />
     </div>
   );
 }
