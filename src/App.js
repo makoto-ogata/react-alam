@@ -6,8 +6,7 @@ function App() {
   const handleTime =(e)=> setTime(e.target.value);
   const [alarmList, setAlarmList] = useState([]);
   const handleAdd =()=> {
-    const addTime = time;
-    const newAlarm = [...alarmList, addTime];
+    const newAlarm = [...alarmList, time];
     setAlarmList(newAlarm);
   }
 
