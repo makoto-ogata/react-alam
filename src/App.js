@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import sound from './sound/piano-without-melody-short-loop-60-bpm.mp3';
+import Alarm from './components/Alarm';
+const alarmSound = new Audio(sound);
+alarmSound.loop = true;
 
 function App() {
-  const alarmSound = new Audio(sound);
-  alarmSound.loop = true;
   const [showTime, setShowTime] = useState(new Date());
   const [time, setTime] = useState('');
   const handleTime =(e)=> setTime(e.target.value);
@@ -34,14 +35,7 @@ function App() {
   }, [nowTime]);
   return (
     <div className="App">
-      <p>現在の時刻</p>
-      <p>{nowTime}</p>
-      <input type="time" value={time} onChange={handleTime} />
-      <button type="submit" onClick={handleAdd}>Set</button>
-      <button type="submit" onClick={stopSound}>Stop</button>
-      <div>
-        {alarmTime}
-      </div>
+      <Alarm nowTime={nowTime} time={time} handleTime={handleTime} handleAdd={handleAdd} stopSound={stopSound} alarmTime={alarmTime} />
     </div>
   );
 }
