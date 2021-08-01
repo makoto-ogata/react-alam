@@ -42,7 +42,7 @@ const App =()=> {
    if(nowTime === alarmTime){
      alarmSound.play();
    }
-  }, [nowTime]);
+  }, [nowTime, alarmTime]);
 
   useEffect(()=>{
     if(nowTimeHourNumber > 18 || nowTimeHourNumber < 6) {
