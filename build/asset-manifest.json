@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6d02734b.chunk.css",
+    "main.js": "/static/js/main.b46ee26e.chunk.js",
+    "main.js.map": "/static/js/main.b46ee26e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.21f1a3ac.js",
+    "runtime-main.js.map": "/static/js/runtime-main.21f1a3ac.js.map",
+    "static/js/2.c055dcf2.chunk.js": "/static/js/2.c055dcf2.chunk.js",
+    "static/js/2.c055dcf2.chunk.js.map": "/static/js/2.c055dcf2.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.6d02734b.chunk.css.map": "/static/css/main.6d02734b.chunk.css.map",
+    "static/js/2.c055dcf2.chunk.js.LICENSE.txt": "/static/js/2.c055dcf2.chunk.js.LICENSE.txt",
+    "static/media/piano-without-melody-short-loop-60-bpm.4eef14ed.mp3": "/static/media/piano-without-melody-short-loop-60-bpm.4eef14ed.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.21f1a3ac.js",
+    "static/js/2.c055dcf2.chunk.js",
+    "static/css/main.6d02734b.chunk.css",
+    "static/js/main.b46ee26e.chunk.js"
+  ]
+}
