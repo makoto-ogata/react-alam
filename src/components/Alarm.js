@@ -62,5 +62,6 @@ const SetButton = styled.button`
   font-size: 18px;
   border-radius: 5px;
   padding: 5px 10px;
+  cursor: pointer;
 `
 export default Alarm;
