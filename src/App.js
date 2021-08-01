@@ -34,8 +34,8 @@ const App =()=> {
     return ()=> clearInterval(timer);
   }, []);
 
-  const nowTime = showTime.toLocaleTimeString([],{hour: 'numeric', minute:'numeric'});
-  const nowTimeHour = showTime.toLocaleTimeString([],{hour: 'numeric'});
+  const nowTime = showTime.toLocaleTimeString([],{hour: '2-digit', minute:'2-digit'});
+  const nowTimeHour = showTime.toLocaleTimeString([],{hour: '2-digit'});
   const nowTimeHourNumber = parseFloat(nowTimeHour);
 
   useEffect(()=>{
