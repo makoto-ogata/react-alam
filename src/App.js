@@ -45,7 +45,7 @@ const App =()=> {
   }, [nowTime, alarmTime]);
 
   useEffect(()=>{
-    if(nowTimeHourNumber > 18 || nowTimeHourNumber < 6) {
+    if(nowTimeHourNumber >= 18 || nowTimeHourNumber < 6) {
       dateMessage = {
         images: 'https://source.unsplash.com/VZxNq9GytpQ',
         text: 'Good Evening'
@@ -55,7 +55,7 @@ const App =()=> {
         images: 'https://source.unsplash.com/-G3rw6Y02D0',
         text: 'Good Morning'
       }
-    } else {
+    } else if(nowTimeHourNumber >= 12 || nowTimeHourNumber < 18) {
       dateMessage = {
         images: 'https://source.unsplash.com/8GVuQUmZW8Y',
         text: 'Good Afternoon'
