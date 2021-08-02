@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import './App.css';
 
 const alarmSound = new Audio(sound);
-alarmSound.muted = false;
 alarmSound.loop = true;
 
 let dateMessage = {
