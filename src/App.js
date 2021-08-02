@@ -45,23 +45,26 @@ const App =()=> {
   }, [nowTime, alarmTime]);
 
   useEffect(()=>{
-    if(nowTimeHourNumber > 6 || nowTimeHourNumber < 12) {
+    if(nowTimeHourNumber > 6 || nowTimeHourNumber < 11) {
       dateMessage = {
         images: 'https://source.unsplash.com/-G3rw6Y02D0',
         text: 'Good Morning'
       }
-    }else if(nowTimeHourNumber >= 12 || nowTimeHourNumber < 18){
+    }
+    if(nowTimeHourNumber > 11 || nowTimeHourNumber < 18){
       dateMessage = {
         images: 'https://source.unsplash.com/8GVuQUmZW8Y',
         text: 'Good Afternoon'
       }
-    } else {
+    }
+    if(nowTimeHourNumber >= 18 || nowTimeHourNumber < 6){
       dateMessage = {
         images: 'https://source.unsplash.com/VZxNq9GytpQ',
         text: 'Good Evening'
       }
     }
   }, [nowTimeHourNumber]);
+
 
   return (
     <Main style={{backgroundImage: `url(${dateMessage.images})`}}>
