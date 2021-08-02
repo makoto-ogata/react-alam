@@ -45,20 +45,20 @@ const App =()=> {
   }, [nowTime, alarmTime]);
 
   useEffect(()=>{
-    if(nowTimeHourNumber >= 18 || nowTimeHourNumber < 6) {
-      dateMessage = {
-        images: 'https://source.unsplash.com/VZxNq9GytpQ',
-        text: 'Good Evening'
-      }
-    }else if(nowTimeHourNumber > 6 || nowTimeHourNumber < 12){
+    if(nowTimeHourNumber > 6 || nowTimeHourNumber < 12) {
       dateMessage = {
         images: 'https://source.unsplash.com/-G3rw6Y02D0',
         text: 'Good Morning'
       }
-    } else if(nowTimeHourNumber >= 12 || nowTimeHourNumber < 18) {
+    }else if(nowTimeHourNumber >= 12 || nowTimeHourNumber < 18){
       dateMessage = {
         images: 'https://source.unsplash.com/8GVuQUmZW8Y',
         text: 'Good Afternoon'
+      }
+    } else {
+      dateMessage = {
+        images: 'https://source.unsplash.com/VZxNq9GytpQ',
+        text: 'Good Evening'
       }
     }
   }, [nowTimeHourNumber]);
