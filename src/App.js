@@ -35,7 +35,7 @@ const App =()=> {
   }, []);
 
   const nowTime = showTime.toLocaleTimeString([],{hour: '2-digit', minute:'2-digit'});
-  const nowTimeHour = showTime.toLocaleTimeString([],{hour: '2-digit'});
+  const nowTimeHour = showTime.toLocaleTimeString([],{hour: 'numeric'});
   const nowTimeHourNumber = parseFloat(nowTimeHour);
 
   useEffect(()=>{
