@@ -14,6 +14,7 @@ const Alarm =(props)=> {
           <SetButton type="submit" onClick={stopSound}>StopAlarm</SetButton>
         </ButtonArea>
         <TimeText>{alarmTime}</TimeText>
+        <Credit>Music By <a href="https://freesound.org/people/josefpres/">josefpres</a></Credit>
       </Content>
   )
 }
@@ -64,5 +65,14 @@ const SetButton = styled.button`
   padding: 5px 10px;
   cursor: pointer;
   background-color: #fff;
+`
+
+const Credit = styled.p`
+  font-style: italic;
+  font-size: 16px;
+  margin-top: 20px;
+  a {
+    color: #fff;
+  }
 `
 export default Alarm;

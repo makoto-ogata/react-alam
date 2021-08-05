@@ -45,13 +45,13 @@ const App =()=> {
   }, [nowTime, alarmTime]);
 
   useEffect(()=>{
-    if(nowTimeHourNumber > 6 || nowTimeHourNumber < 11) {
+    if(nowTimeHourNumber >= 6 || nowTimeHourNumber < 11) {
       dateMessage = {
         images: 'https://source.unsplash.com/-G3rw6Y02D0',
         text: 'Good Morning'
       }
     }
-    if(nowTimeHourNumber > 11 || nowTimeHourNumber < 18){
+    if(nowTimeHourNumber >= 11 || nowTimeHourNumber < 18){
       dateMessage = {
         images: 'https://source.unsplash.com/8GVuQUmZW8Y',
         text: 'Good Afternoon'
