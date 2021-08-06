@@ -57,7 +57,7 @@ const App =()=> {
         text: 'Good Afternoon'
       }
     }
-    if(nowTimeHourNumber >= 19 && nowTimeHourNumber <= 6){
+    if(nowTimeHourNumber >= 19 && nowTimeHourNumber <= 5){
       dateMessage = {
         images: 'https://source.unsplash.com/VZxNq9GytpQ',
         text: 'Good Evening'
