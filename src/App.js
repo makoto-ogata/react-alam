@@ -51,13 +51,13 @@ const App =()=> {
         text: 'Good Morning'
       }
     }
-    if(nowTimeHourNumber >= 12 && nowTimeHourNumber <= 18){
+    else if(nowTimeHourNumber >= 12 && nowTimeHourNumber <= 18){
       dateMessage = {
         images: 'https://source.unsplash.com/8GVuQUmZW8Y',
         text: 'Good Afternoon'
       }
     }
-    if(nowTimeHourNumber >= 19 && nowTimeHourNumber <= 5){
+    else {
       dateMessage = {
         images: 'https://source.unsplash.com/VZxNq9GytpQ',
         text: 'Good Evening'
